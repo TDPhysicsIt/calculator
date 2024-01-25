@@ -1,0 +1,13 @@
+.ui-tabs-nav {
+background: rgb(50,50,50);
+  }
+
+#calcvalid, #dualdezvalid, #hexdezvalid {
+background: navy;
+}
+
+.calcpress {
+border-color: lime;
+border-width: 4px;
+background: red;
+}

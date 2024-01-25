@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Thomas Dittmar">
+    <title>Sience-Calculator</title>
+    <link rel="stylesheet" href="css/jqcss.css" type="text/css">
+    <link rel="stylesheet" href="css/ui.css" type="text/css">
+    <link rel="stylesheet" href="css/calculator.css" type="text/css">
+    <link rel="icon" href="Symbole/calc.png">
+    <script src="js/jq2.js"></script>
+    <script src="js/jqui2.js"></script>
+    <script src="js/calculator.js"></script>
+</head>
+<body style="background: #212121;">
+    <table style="width: 100%; background: rgb(46, 46, 46) none repeat scroll 0% 0%;" id="calculator"
+    align="center">
+    <tbody>
+        <tr>
+            <td style="width: 100%; background: rgb(46, 46, 46) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-weight: bold; font-family: Calibri; font-size: 40px;"
+                >
+                <div style="width: 100%; height: 10vh; background: rgb(28, 28, 28) none repeat scroll 0% 0%; display: flex; justify-content: flex-end;"
+                    id="resularea"><br></div>
+            </td>
+        </tr>
+        <tr>
+            <td style="height: 30px; font-size: 20px; font-weight: bold; background: rgb(46, 46, 46) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 50%; font-family: Arial; text-align: left; vertical-align: top;"
+                align="center">
+                <ul>
+                    <li><a href="#calc1">Allgemein</a></li>
+                    <li><a href="#calc2">Funktionen</a></li>
+                    <li><a href="#calc6">Zahlensysteme</a><br></li>
+                    <li><a href="#calc3">Konst.</a></li>
+                    <li><a href="#calc4">Speicher</a></li>
+                    <li><a href="#calc7">Umrechner</a><br></li>
+                    <li><a href="#calc5">Metalle</a><br></li>
+                </ul>
+            </td>
+        </tr>
+        <tr align="left">
+            <td style="height: 30px; font-size: 20px; font-weight: bold; background: rgb(46, 46, 46) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 50%;"
+                >
+                <div style="width: 99%; height: 80vh; background: rgb(28, 28, 28) none repeat scroll 0% 0%; padding: 2px 0px 0px 2px; text-align: center; vertical-align: middle;"
+                    id="calc1"><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">7</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">8</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">9</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcoperators">/</button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">4</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">5</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">6</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcoperators">*</button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">1</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">2</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">3</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcoperators">-</button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">0</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcdeleter">DEL</button> <button
+                        style="color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        id="calcvalid">=</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcoperators">+</button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">(</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcsymbole">.</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 24%; height: 15.5vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        class="calcdeleter">AC</button> <br></div>
+                <div style="width: 99%; height: 80vh; background: rgb(28, 28, 28) none repeat scroll 0% 0%; padding: 2px 0px 0px 2px; text-align: center; vertical-align: middle;"
+                    id="calc2"><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn1">x<sup>2</sup></button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn2">x<sup>3</sup></button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn3">x<sup>n</sup></button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn4">x<sup>-1</sup></button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn5">cot<sup>-1</sup>(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Arial; font-size: 40px; border-radius: 9px;"
+                        id="calcbtn26">e</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Arial; font-size: 40px; border-radius: 9px;"
+                        id="calcbtn31">±</button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn6">√x</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn7"><sup>3</sup>√x</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn8">e<sup>x</sup></button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn9">ln(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn10">sinh(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn27">√2</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn32">Ceil</button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn11">log(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn12">log<sub>2</sub>(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn13">sin(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn14">cos(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn15">cosh(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn28">x10<sup>n</sup></button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn33">Floor</button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn16">tan(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn17">cot(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn18">sin<sup>-1</sup>(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn19">cos<sup>-1</sup>(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn20">tan<sup>-1</sup>(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn29">|x|</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn34">x2<sup>n</sup></button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn21">tanh(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Arial; font-size: 25px; border-radius: 9px;"
+                        id="calcbtn22">sinh<sup>-1</sup>(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Arial; font-size: 25px; border-radius: 9px;"
+                        id="calcbtn23">cosh<sup>-1</sup>(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.5%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Arial; font-size: 25px; border-radius: 9px;"
+                        id="calcbtn24">tanh<sup>-1</sup>(x)</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 40px; border-radius: 9px;"
+                        id="calcbtn25">π</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn30">F→E</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 13.4%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="calcbtn35">n!</button> <br></div>
+                <div style="width: 99%; height: 80vh; background: rgb(28, 28, 28) none repeat scroll 0% 0%; padding: 2px 0px 0px 2px; text-align: center; vertical-align: middle; color: rgb(255, 255, 255);"
+                    id="calc6">Hexadezimal<br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">0</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">1</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">2</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">3</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">4</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">5</button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">6</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">7</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">8</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">9</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">a</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">b</button> <br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">c</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">d</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">e</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 15.8%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="hexa_calcsymbole">f</button> <button
+                        style="color: rgb(255, 255, 255); width: 31.5%; height: 18.75vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="hexdezvalid">In Dezimal</button> <br>Dualsystem<br><button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 30%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="dual_calcsymbole">0</button> <button
+                        style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 30%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        class="dual_calcsymbole">1</button> <button
+                        style="color: rgb(255, 255, 255); width: 35%; height: 15vh; margin: 4px 0px 0px 2px; font-weight: bold; font-family: Comic Sans MS; font-size: 30px; border-radius: 9px;"
+                        id="dualdezvalid">In Dezimal</button>&nbsp; </div>
+                <div style="width: 99%; height: 80vh; background: rgb(28, 28, 28) none repeat scroll 0% 0%; padding: 2px 0px 0px 2px; text-align: center; vertical-align: middle;"
+                    id="calc3"><select size="15"
+                        style="background: rgb(42, 41, 41) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 95%; height: 70vh; border-width: 4px; border-style: outset; border-color: grey; border-radius: 20px; font-weight: bold; font-family: Arial; font-size: 25px; margin: 25px 2px 2px;"
+                        id="calcConst">
+                        <optgroup label="Astrophysik"
+                            style="background: green none repeat scroll 0% 0%; font-family: Impact; color: white; font-weight: bold;"
+                            >
+                            <option value="9.80665"
+                                style="font-family: Arial Black; font-weight: bold; color: white; background: rgb(21, 21, 21) none repeat scroll 0% 0%;"
+                                >Gravitationsbeschleunigung - 9.80665 m/s²</option>
+                            <option value="6378137"
+                                style="font-family: Arial Black; font-weight: bold; color: white; background: rgb(21, 21, 21) none repeat scroll 0% 0%;"
+                                >Erdradius - 6378137 m</option>
+                            <option value="1.496e+11"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Astronomische Einheit 1.496*10^11 m</option>
+                            <option value="3.156e+7"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">Jahr
+                                auf der Erde 3.156*10^7 s</option>
+                            <option value="1e-26"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Jansky 10^-26 W*m^-2*Hz^-1</option>
+                            <option value="9.46073e+15"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Lichtjahr 9.46073*10^15 m</option>
+                            <option value="5.9722e+24"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Erdmasse 5.9722*10^24 kg</option>
+                            <option value="1.9889e+30"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Sonnenmasse 1.9889*10^30 kg</option>
+                            <option value="7.342e+22"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Mondmasse 7.342*10^22 kg</option>
+                            <option value="6.67384e-11"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Gravitationskonstante 6.67384*10^-11 m^3*kg^-1*s^-2</option>
+                        </optgroup>
+                        <optgroup label="Elektromagnetismus"
+                            style="background: red none repeat scroll 0% 0%; font-family: Impact; color: yellow; font-weight: bold;"
+                            >
+                            <option value="8.854188e-12"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Elektrische Feldkonstante 8.854188*10^-12 F*m^-1</option>
+                            <option value="1.25664e-6"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Magnetische Feldkonstante 1.25664*10^-6 H*m^-1</option>
+                            <option value="1.60218e-19"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Elementarladung 1.60218*10^-19 C</option>
+                            <option value="2.997925e+8"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Lichtgeschwindigkeit im Vakuum 2.997925*10^8 m*s^-1</option>
+                        </optgroup>
+                        <optgroup label="Physikalische Chemie"
+                            style="background: navy none repeat scroll 0% 0%; font-family: Impact; color: white; font-weight: bold;"
+                            >
+                            <option value="1.660539e-27"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Atomare Masseneinheit 1.660539*10^-27 kg</option>
+                            <option value="6.022141e+23"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Avogadro-Konstante 6.022141*10^23 mol^-1</option>
+                            <option value="1.380649e-23"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Boltzmann-Konstante 1.380649*10^-23 J*K^-1</option>
+                            <option value="96485.3365"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Faraday-Konstante 96485.3365 C*mol^-1</option>
+                            <option value="2.68678e+25"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Loschmidt-Konstante 2.68678*10^25 m^-3</option>
+                            <option value="8.3144621"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Universelle Gaskonstante 8.3144621 J*K^-1*mol^-1</option>
+                            <option value="101325"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Atmosphären-Luftdruck 101325 Pa</option>
+                        </optgroup>
+                        <optgroup label="Quantenmechanik"
+                            style="background: purple none repeat scroll 0% 0%; font-family: Impact; color: yellow; font-weight: bold;"
+                            >
+                            <option value="9.109383e-31"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Masse Elektron 9.109383*10^-31 kg</option>
+                            <option value="1.672622e-27"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Masse Proton 1.672622*10^-27 kg</option>
+                            <option value="1.674927e-27"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Masse Neutron 1.674927*10^-27 kg</option>
+                            <option value="6.62607e-34"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Planck`sches Wirkungsquantum 6.62607*10^-34 J*s</option>
+                            <option value="1.05457e-34"
+                                style="background:#151515; font-family:Arial Black; color:white; font-weight:bold;">
+                                Reduzierte Planckzahl 1.05457*10^-34 J*s</option>
+                        </optgroup>
+                    </select> <br></div>
+                <div style="width: 99%; height: 80vh; background: rgb(28, 28, 28) none repeat scroll 0% 0%; padding: 2px 0px 0px 2px; text-align: center; vertical-align: middle;"
+                    id="calc4"><input type="text"
+                        style="background: navy none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 60%; height: 50px; font-weight: bold; font-family: Arial; font-size: 40px; border-radius: 9px; margin: 10px 2px 2px;"
+                        placeholder="Speicherwert eingeben" id="saveval"> <button
+                        style="background: navy none repeat scroll 0% 0%; color: rgb(255, 255, 255); border-width: 4px; border-style: outset; border-color: grey; width: 180px; height: 50px; margin: 10px 2px 2px;"
+                        id="btn1"><img src="Symbole/release2.png"
+                            style="width:18px; height:18px;">&nbsp;Speichern</button> <button
+                        style="background: navy none repeat scroll 0% 0%; color: rgb(255, 255, 255); border-width: 4px; border-style: outset; border-color: grey; width: 180px; height: 50px; margin: 10px 2px 2px;"
+                        id="btn2"><img src="Symbole/delete.png" style="width:18px; height:18px;">&nbsp;Item
+                        löschen</button> <br><br><select size="15"
+                        style="background: rgb(42, 41, 41) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 90%; height: 60vh; border-width: 4px; border-style: outset; border-color: grey; border-radius: 20px; font-weight: bold; font-family: Arial; font-size: 25px;"
+                        id="calcstore"></select>&nbsp; <br></div>
+                <div style="width: 99%; height: 80vh; background: rgb(28, 28, 28) none repeat scroll 0% 0%; padding: 2px 0px 0px 2px; text-align: center; vertical-align: middle;"
+                    id="calc7"><select size="2"
+                        style="background: rgb(42, 41, 41) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 90%; height: 60vh; border-width: 4px; border-style: outset; border-color: grey; border-radius: 20px; font-weight: bold; font-family: Arial; font-size: 25px;"
+                        id="umrechner">
+                        <optgroup label="KFZ"
+                            style="background: red none repeat scroll 0% 0%; font-family: Impact; color: yellow; font-weight: bold;"
+                            >
+                            <option value="0.7355"
+                                style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; font-family: Arial; color: white; font-weight: bold;"
+                                >PS in kW</option>
+                            <option value="1.35962"
+                                style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; font-family: Arial; color: white; font-weight: bold;"
+                                >kW in PS</option>
+                        </optgroup>
+                        <optgroup label="Längenumrechnungen"
+                            style="background: green none repeat scroll 0% 0%; font-family: Impact; color: yellow; font-weight: bold;"
+                            >
+                            <option value="1.609"
+                                style="background:#151515; font-family:Arial; color:white; font-weight:bold;">Meilen in
+                                Kilometer</option>
+                            <option value="0.6215"
+                                style="background:#151515; font-family:Arial; color:white; font-weight:bold;">Kilometer
+                                in Meilen</option>
+                            <option value="0.91"
+                                style="background:#1C1C1C; font-family:Arial; color:white; font-weight:bold;">Yard in
+                                Meter</option>
+                            <option value="1.0989"
+                                style="background:#1C1C1C; font-family:Arial; color:white; font-weight:bold;">Meter in
+                                Yard</option>
+                            <option value="2.54"
+                                style="background:#2E2E2E; font-family:Arial; color:white; font-weight:bold;">Zoll in
+                                Zentimeter</option>
+                            <option value="0.3937"
+                                style="background: rgb(46, 46, 46) none repeat scroll 0% 0%; font-family: Arial; color: white; font-weight: bold;"
+                                >Zentimeter in Zoll</option>
+                            <option value="118.12"
+                                style="background: rgb(66, 66, 66) none repeat scroll 0% 0%; font-family: Arial; color: white; font-weight: bold;"
+                                >Zentimeter in Pixel</option>
+                            <option value="0.008466"
+                                style="background: rgb(66, 66, 66) none repeat scroll 0% 0%; font-family: Arial; color: white; font-weight: bold;"
+                                >Pixel in Zentimeter</option>
+                        </optgroup>
+                        <optgroup label="Währungen"
+                            style="background: navy none repeat scroll 0% 0%; font-family: Impact; color: yellow; font-weight: bold;"
+                            >
+                            <option value="1.1320"
+                                style="background: rgb(21, 21, 21) none repeat scroll 0% 0%; font-family: Arial; color: white; font-weight: bold;"
+                                >Euro in US-Dollar</option>
+                            <option value="0.88339"
+                                style="background:#151515; font-family:Arial; color:white; font-weight:bold;">US-Dollar
+                                in Euro</option>
+                            <option value="0.85"
+                                style="background:#1C1C1C; font-family:Arial; color:white; font-weight:bold;">Euro in
+                                Pfund</option>
+                            <option value="1.17647"
+                                style="background: rgb(28, 28, 28) none repeat scroll 0% 0%; font-family: Arial; color: white; font-weight: bold;"
+                                >Pfund in Euro</option>
+                            <option value="128.2"
+                                style="background:#2E2E2E; font-family:Arial; color:white; font-weight:bold;">Euro in
+                                Yen</option>
+                            <option value="0.0078"
+                                style="background:#2E2E2E; font-family:Arial; color:white; font-weight:bold;">Yen in
+                                Euro</option>
+                        </optgroup>
+                    </select>&nbsp; <br><button
+                        style="background: navy none repeat scroll 0% 0%; color: rgb(255, 255, 255); margin: 20px 10px 10px; width: 90%; height: 80px; font-weight: bold; font-family: Arial; font-size: 40px;"
+                        id="btn3">Umrechnen</button> <br></div>
+                <div style="width: 99%; height: 80vh; background: rgb(28, 28, 28) none repeat scroll 0% 0%; padding: 2px 0px 0px 2px; text-align: center; vertical-align: middle; overflow: auto;"
+                    id="calc5">
+                    <table id="metalle" width="100%" border="0">
+                        <tbody>
+                            <tr>
+                                <td style="height: 30px; font-size: 18px; font-weight: bold; background: navy none repeat scroll 0% 0%; color: yellow; width: 0.462963%; font-family: Arial;"
+                                    align="left">Metall</td>
+                                <td style="height: 30px; font-size: 18px; font-weight: bold; background: navy none repeat scroll 0% 0%; color: yellow; width: 0.462963%; font-family: Arial;"
+                                    align="left">elektr. Leitfähigkeit</td>
+                                <td style="height: 30px; font-size: 18px; font-weight: bold; background: navy none repeat scroll 0% 0%; color: yellow; width: 0.462963%; font-family: Arial;"
+                                    align="left">Einheit<br></td>
+                                <td style="height: 30px; font-size: 18px; font-weight: bold; background: navy none repeat scroll 0% 0%; color: yellow; width: 0.462963%; font-family: Arial;"
+                                    align="left">Dichte</td>
+                                <td style="height: 30px; font-size: 18px; font-weight: bold; background: navy none repeat scroll 0% 0%; color: yellow; width: 0.462963%; font-family: Arial;"
+                                    align="center">Einheit</td>
+                                <td style="height: 30px; font-size: 18px; font-weight: bold; background: navy none repeat scroll 0% 0%; color: yellow; width: 0.462963%; font-family: Arial;"
+                                    align="left">spezifische Wärmkapazität</td>
+                                <td style="height: 30px; font-size: 18px; font-weight: bold; background: navy none repeat scroll 0% 0%; color: yellow; width: 0.462963%; font-family: Arial;"
+                                    align="center">Einheit</td>
+                                <td style="height: 30px; font-size: 18px; font-weight: bold; background: navy none repeat scroll 0% 0%; color: yellow; width: 0.462963%; font-family: Arial;"
+                                    align="left">Wärmeleitfähigkeit</td>
+                                <td style="height: 30px; font-size: 18px; font-weight: bold; background: navy none repeat scroll 0% 0%; color: yellow; width: 0.462963%; font-family: Arial;"
+                                    align="center">Einheit</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Aluminium</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf1">36</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di1">2.7</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk1">0.921</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf1">237</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Blei</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf7">4.8</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di7">11.34</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk7">0.130</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf7">35</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Chrom</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf8">6.7</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di8">7.19</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk8">0.451</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf8">30</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Eisen</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf2">10</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di2">7.8</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk2">0.461</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf2">80.2</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Gold</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf4">45.7</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di4">19.3</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk4">0.130</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf4">316</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Cadmium</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf9">13</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di9">8.64</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk9">0.234</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf9">97</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Kobalt</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf10">16.1</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di10">8.9</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk10">0.419</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf10">100</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Kupfer</td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%;" class="tc22"
+                                    id="lf3">56</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-weight: bold;"
+                                    class="tc22" id="di3">8.9</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    class="tc22" id="wk3">0.389</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%;" class="tc22"
+                                    id="wlf3">401</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Lithium</td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%;" class="tc22"
+                                    id="lf11">0</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di11">0.534</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk11">3.3</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf11">84.7</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Magnesium</td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%;" class="tc22"
+                                    id="lf12">22.7</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di12">1.74</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk12">1.047</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf12">170</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Mangan</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf13">0.54</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di13">7.43</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk13">0.502</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf13">7.8</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Molybdän</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf14">21</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di14">10.2</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk14">0.272</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf14">138</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Nickel</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf15">10.5</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-weight: bold;"
+                                    class="tc22" id="di15">8.85</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk15">0.461</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf15">85</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Platin</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf16">10.2</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di16">21.5</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    class="tc22" id="wk16">0.134</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf16">71</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Kupfer</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf17">1.063</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di17">13.5</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    class="tc22" id="wk17">0.138</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf17">401</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Silber</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf5">60</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di5">10.5</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk5">0.234</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf5">429</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Stahl</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf18">0</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di18">7.85</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    class="tc22" id="wk18">0.49</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%;" class="tc22"
+                                    id="wlf18">50</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Tantal</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf19">6.67</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di19">16.7</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    class="tc22" id="wk19">0.14</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%;" class="tc22"
+                                    id="wlf19">54</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Titan</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf20">1.25</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di20">4.54</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    class="tc22" id="wk20">5.46</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf20">401</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Wismut</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf21">0.94</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di21">9.8</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk21">0.126</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%;" class="tc22"
+                                    id="wlf21">8.4</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Wolfram</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf22">18.2</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di22">19.3</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk22">0.142</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%; background: black none repeat scroll 0% 0%;" class="tc22"
+                                    id="wlf22">167</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Zink</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf23">16</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di23">7.14</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk23">0.394</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf23">120</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Zinn</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf24">8.7</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di24">7.28</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk24">0.226</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf24">67</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 0.462963%;" class="tc22">Kohle</td>
+                                <td style="width: 0.462963%;" class="tc22" id="lf6">0.01</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>6</sup>
+                                    m*Ω<sup>-1</sup>*mm<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="di6">2.0</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup> kg*m<sup>-3</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wk6">0.5</td>
+                                <td style="width: 0.462963%;" class="tc22">*10<sup>3</sup>
+                                    J*kg<sup>-1</sup>*K<sup>-1</sup></td>
+                                <td style="width: 0.462963%;" class="tc22" id="wlf6">0.26</td>
+                                <td style="width: 0.462963%;" class="tc22">W*m<sup>-1</sup>*K<sup>-1</sup></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>&nbsp;
+</body>
+</html>
+
